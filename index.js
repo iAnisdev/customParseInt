@@ -3,7 +3,7 @@ function originalparseInt(str) {
     return parseInt(str);
 }
 
-// custom function to return parseInt str 
+// function to return parseInt str 
 
 function customparseInt(str) {
     str = str.replace(/\s/g , '');
@@ -11,11 +11,14 @@ function customparseInt(str) {
         return NaN;
     }else{
         let result = ''
-        str.split('').forEach(function(char){
-           if(/[0-9]/.test(char)){
-               result += char;
-           }
-        })
+       for(var i = 0; i < str.length; i++){
+        if(/[0-9]/.test(str[i])){
+            result += str[i];
+            continue;
+        }else{
+            break;
+        }
+       }
         return Number(result);
     }
 }
