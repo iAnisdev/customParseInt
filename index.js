@@ -3,7 +3,7 @@ function originalparseInt(str) {
     return parseInt(str);
 }
 
-// function to return parseInt str 
+// custom function to return parseInt str
 
 function customparseInt(str) {
     str = str.replace(/\s/g , '');
